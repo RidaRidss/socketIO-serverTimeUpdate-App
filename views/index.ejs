@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Socket-IO_Server Time Update - App</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" href="https://raw.githubusercontent.com/HubSpot/tether/master/dist/js/tether.min.js"></script>
+<script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<script type="text/javascript">$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+$('#btn').tooltip('show')
+})</script>
+<script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js">
+</script>
+<script type="text/javascript">
+var socket = io.connect();
+socket.on('message', function (time) {
+document.getElementById('time').innerHTML = time;
+});
+
+</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row center">
+<div class="col-xs-1 col-sm-4 col-lg-2  col-md-2"></div>
+  <div style="margin-top:50px;" class="panel panel-primary text-center col-xs-10 col-sm-4 col-lg-8  col-md-8">
+   <div class = "panel-heading">
+      <h1 class = "panel-title">Socket.IO - <small>Server Time Update App</small></h1>
+   </div>
+ <div class = "panel-body">
+<img class="img-responsive center-block" src="./images/timer.jpg">
+<cite title="">
+ <h4><cite  class="text-primary"  id="time"></cite></h4>
+<div class="btn-group-vertical">
+<button class="text-center btn btn-default btn-lg btn-block active" type="button" >Developed By</button>
+<button id="btn" type="button" class="btn btn-primary btn-lg btn-block active has-popover" data-toggle="tooltip" data-placement="right" title="She is having experience at training and development. she is Frontend/Mean Stack/Web Daveloper" >Rida Bilgrami</a>
+</div>
+</div>
+</div>
+<div class="col-xs-1 col-sm-4 col-lg-2  col-md-2"></div>
+</div>
+</div>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "socketIO-serverTimeUpdate-App",
+  "version": "1.0.0",
+  "description": "Server Updated Time - socket.io app",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "http": "0.0.0",
+     "path": "^0.12.7",
+    "socket.io": "~0.9.16" },
+  "author": "Rida Bilgrami"
+}
